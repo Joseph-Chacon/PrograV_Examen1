@@ -1,27 +1,87 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\dotNet\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj": {}
+    "C:\\programacionV\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\dotNet\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj": {
+    "C:\\programacionV\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\dotNet\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj",
+        "projectUniqueName": "C:\\programacionV\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj",
         "projectName": "TaskManagementConsoleApp",
-        "projectPath": "C:\\Users\\User\\Documents\\dotNet\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\dotNet\\Examen1\\TaskManagementConsoleApp\\obj\\",
+        "projectPath": "C:\\programacionV\\Examen1\\TaskManagementConsoleApp\\TaskManagementConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\JChacon.GRUPOMATERIALES\\.nuget\\packages\\",
+        "outputPath": "C:\\programacionV\\Examen1\\TaskManagementConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\JChacon.GRUPOMATERIALES\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\programacionV\\Examen1\\TaskManagementLibrary\\TaskManagementLibrary.csproj": {
+                "projectPath": "C:\\programacionV\\Examen1\\TaskManagementLibrary\\TaskManagementLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\programacionV\\Examen1\\TaskManagementLibrary\\TaskManagementLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\programacionV\\Examen1\\TaskManagementLibrary\\TaskManagementLibrary.csproj",
+        "projectName": "TaskManagementLibrary",
+        "projectPath": "C:\\programacionV\\Examen1\\TaskManagementLibrary\\TaskManagementLibrary.csproj",
+        "packagesPath": "C:\\Users\\JChacon.GRUPOMATERIALES\\.nuget\\packages\\",
+        "outputPath": "C:\\programacionV\\Examen1\\TaskManagementLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JChacon.GRUPOMATERIALES\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

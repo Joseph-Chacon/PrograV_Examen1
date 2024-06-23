@@ -9,3 +9,15 @@ C:\Users\User\Documents\dotNet\Examen1\TaskManagementLibrary\obj\Debug\net8.0\Ta
 C:\Users\User\Documents\dotNet\Examen1\TaskManagementLibrary\obj\Debug\net8.0\refint\TaskManagementLibrary.dll
 C:\Users\User\Documents\dotNet\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.pdb
 C:\Users\User\Documents\dotNet\Examen1\TaskManagementLibrary\obj\Debug\net8.0\ref\TaskManagementLibrary.dll
+C:\programacionV\Examen1\TaskManagementLibrary\bin\Debug\net8.0\TaskManagementLibrary.deps.json
+C:\programacionV\Examen1\TaskManagementLibrary\bin\Debug\net8.0\TaskManagementLibrary.dll
+C:\programacionV\Examen1\TaskManagementLibrary\bin\Debug\net8.0\TaskManagementLibrary.pdb
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.AssemblyInfoInputs.cache
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.AssemblyInfo.cs
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.csproj.CoreCompileInputs.cache
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.sourcelink.json
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.dll
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\refint\TaskManagementLibrary.dll
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\TaskManagementLibrary.pdb
+C:\programacionV\Examen1\TaskManagementLibrary\obj\Debug\net8.0\ref\TaskManagementLibrary.dll

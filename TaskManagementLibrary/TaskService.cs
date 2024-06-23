@@ -20,7 +20,7 @@ public class TaskService
         return tasks;
     }
 
-    private Task GetTaskById(int id)
+    public Task GetTaskById(int id)
     {
         return tasks.FirstOrDefault(t => t.Id == id);
     }
@@ -29,9 +29,12 @@ public class TaskService
     {
         var task = GetTaskById(id);
         if (task == null) return false;
-
-        task.Title = title;
-        task.Description = description;
+        if (!string.IsNullOrWhiteSpace(title)) {
+            task.Title = title;
+        }
+        if (!string.IsNullOrWhiteSpace(description)) {
+            task.Description = description;
+        }
         task.IsCompleted = isCompleted;
         return true;
     }
