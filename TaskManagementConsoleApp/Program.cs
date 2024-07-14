@@ -3,6 +3,28 @@ using TaskManagementLibrary; //RETO 1 (1 pt): La linea está bien, pero no funci
 
 class Program
 {
+    public static void Leer_archivo()
+    {
+        try
+        {
+            using (StreamReader sr = File.OpenText("data.txt"))
+            {
+                Console.WriteLine($"The first line of this file is {sr.ReadLine()}");
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            Console.WriteLine($"The file was not found: '{e}'");
+        }
+        catch (DirectoryNotFoundException e)
+        {
+            Console.WriteLine($"The directory was not found: '{e}'");
+        }
+        catch (IOException e)
+        {
+            Console.WriteLine($"The file could not be opened: '{e}'");
+        }
+    }
     static bool confirme(string accion)
     {
         Console.WriteLine("Confirme " + accion + " s/n");
@@ -10,6 +32,7 @@ class Program
     } 
     static void Main(string[] args)
     {
+        Leer_archivo();
         var taskService = new TaskService();
 
         while (true)
@@ -55,37 +78,63 @@ class Program
                     Console.WriteLine("-------------------------------------------------");
                     break;
                 case "3":
-                    Console.Write("Introduzca el Id de la tarea por actualizar: ");
-                    var updateId = int.Parse(Console.ReadLine());
-                    task = taskService.GetTaskById(updateId); // RETO 3 (2 pts): corregir, debe cargarse con la tarea que posea el id indicado en updateId  !!!Completado
+
+                     // RETO 3 (2 pts): corregir, debe cargarse con la tarea que posea el id indicado en updateId  !!!Completado
                     //RETO 4 (1 pt): imprimir el titulo de la tarea seleccionada !!!Completado
-                    Console.Write($"{task.Title}-> Nuevo titulo: ");
-                    var newTitle = Console.ReadLine();
-                    //RETO 5 (1 pt): imprimir la descripcion de la tarea seleccionada !!!Completado
-                    Console.Write($"{task.Description}-> Nueva Descripcion: ");
-                    var newDescription = Console.ReadLine();
-                    Console.Write("Completada (true/false): ");
-                    var isCompleted = bool.Parse(Console.ReadLine());
-                    //RETO 6 ( 5 pts ) El código debe modificarse en la librería, de tal forma que si se recibe title vacio
-                    // entonces no se modifique, lo mismo para description
-                    // !!!Completado
-                    if (taskService.UpdateTask(updateId, newTitle, newDescription, isCompleted))
-                    {
-                        Console.WriteLine("Tarea completada exitosamente.");
+
+                    /*
+                    prueba
+                    
+                    */
+                    try {
+                        Console.Write("Introduzca el Id de la tarea por actualizar: ");
+                        var updateId = 0;
+                        //var 
+                        try{
+                            updateId = int.Parse(Console.ReadLine());
+   
+                        }
+                        catch(FormatException){
+                            Console.WriteLine("Introduzca un ID valido");
+                        break;
+                        }
+                        task = taskService.GetTaskById(updateId);
+
                         
-                    }
-                    else
-                    {
-                        Console.WriteLine("Tarea no encontrada.");
+                                        //--------------------------------------------------------
+                        Console.Write($"{task.Title}-> Nuevo titulo: ");
+                        var newTitle = Console.ReadLine();
+                        //RETO 5 (1 pt): imprimir la descripcion de la tarea seleccionada !!!Completado
+                        Console.Write($"{task.Description}-> Nueva Descripcion: ");
+                        var newDescription = Console.ReadLine();
+                        Console.Write("Completada (true/false): ");
+                        var isCompleted = bool.Parse(Console.ReadLine());
+                        //RETO 6 ( 5 pts ) El código debe modificarse en la librería, de tal forma que si se recibe title vacio
+                        // entonces no se modifique, lo mismo para description
+                        // !!!Completado
+                        if (taskService.UpdateTask(updateId, newTitle, newDescription, isCompleted))
+                        {
+                            Console.WriteLine("Tarea completada exitosamente.");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Tarea no encontrada.");
+                        }
+                    } catch(Exception ex){
+                        Console.WriteLine("ID no encontrado, verifique");
                     }
                     break;
+
                 case "4":
+                    try{
                     Console.Write("Introduzca el Id de la tarea a eliminar: ");
                     var deleteId = 0;
                     try{
                         deleteId = int.Parse(Console.ReadLine());
                       }                      
-                    catch {
+                    catch (FormatException) {
+                        Console.WriteLine("Introduzca un ID valido");
                         break;
                     }
                     
@@ -108,6 +157,9 @@ class Program
                             Console.WriteLine("Tarea no encontrada.");
                         }
                     }    
+                    }catch(Exception ex){
+                        Console.WriteLine("ID no encontrado, verifique");
+                    }
                     break;
                 case "5":
                     //RETO 8 (5 pts) crear la funcionalidad completa del método

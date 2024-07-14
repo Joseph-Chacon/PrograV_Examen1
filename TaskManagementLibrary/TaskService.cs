@@ -41,10 +41,19 @@ public class TaskService
 
     public bool DeleteTask(int id)
     {
-        var task = GetTaskById(id);
-        if (task == null) return false;
+        try
+        {
+            var task = GetTaskById(id);
+            if (task == null) return false;
 
-        tasks.Remove(task);
-        return true;
+            tasks.Remove(task);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($" Error al eliminar la tarea {ex.Message}");
+            throw;
+        }
+
     }
 }
